@@ -1,4 +1,4 @@
-from lib.utils.paths import video_path, image_path
+from lib.utils.paths import video_path, original_image_path
 import cv2
 
 
@@ -15,5 +15,5 @@ def video_to_images(video_name):
         if not success:
             break
 
-        path = image_path(video_name, str(frame_index))
-        cv2.imwrite(path, frame)
+        image_path = original_image_path(video_name, str(frame_index))
+        cv2.imwrite(image_path, frame)

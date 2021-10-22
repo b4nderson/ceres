@@ -1,2 +1,4 @@
 assets/**/videos/*.mp4
 assets/**/images/*.png
+
+__pycache__/
