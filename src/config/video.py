@@ -1,1 +1,1 @@
-frame_rate = 60
+frame_rate = 24
