@@ -3,6 +3,8 @@ from lib.utils.paths import (
 
 from lib.utils.sorted_alphanumeric import sorted_alphanumeric
 
+from config.video import frame_rate
+
 from os import listdir
 import cv2
 
@@ -28,7 +30,7 @@ def cartoons_to_video(folder_name):
 
         output_path = cartoon_video_folder_path(folder_name)
         output = cv2.VideoWriter(
-            output_path, cv2.VideoWriter_fourcc(*'mp4v'), 30, size)
+            output_path, cv2.VideoWriter_fourcc(*'mp4v'), frame_rate, size)
 
         for cartoon_index in range(len(cartoons)):
             output.write(cartoons[cartoon_index])
