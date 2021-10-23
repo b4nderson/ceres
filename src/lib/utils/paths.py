@@ -1,8 +1,8 @@
 from pathlib import PurePath
 from os import path, makedirs
 
-from config.extensions import video_extension, image_extension
-from config.filenames import video_original, video_cartoon
+from config.extensions import video_extension, image_extension, audio_extension
+from config.filenames import video_original, video_cartoon, audio_original
 
 
 def videos_folder_path(folder_name):
@@ -90,5 +90,21 @@ def cartoon_image_path(folder_path, frame_name):
         frame_name += '.{}'.format(image_extension)
 
     full_path = PurePath(full_folder_path, '{}'.format(frame_name))
+
+    return str(full_path)
+
+
+def original_audio_path(folder_name):
+    full_folder_path = PurePath(
+        'assets',
+        folder_name,
+        'audios'
+    )
+
+    if not path.exists(full_folder_path):
+        makedirs(full_folder_path)
+
+    full_path = PurePath(full_folder_path, '{}.{}'.format(
+        audio_original, audio_extension))
 
     return str(full_path)
