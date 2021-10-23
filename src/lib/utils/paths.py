@@ -2,7 +2,8 @@ from pathlib import PurePath
 from os import path, makedirs
 
 from config.extensions import video_extension, image_extension, audio_extension
-from config.filenames import video_original, video_cartoon, audio_original
+from config.filenames import (
+    video_original, video_cartoon, audio_original, video_output)
 
 
 def videos_folder_path(folder_name):
@@ -46,6 +47,17 @@ def cartoon_video_path(folder_name):
         folder_name,
         'videos',
         '{}.{}'.format(video_cartoon, video_extension)
+    )
+
+    return str(full_path)
+
+
+def output_video_path(folder_name):
+    full_path = PurePath(
+        'assets',
+        folder_name,
+        'videos',
+        '{}.{}'.format(video_output, video_extension)
     )
 
     return str(full_path)

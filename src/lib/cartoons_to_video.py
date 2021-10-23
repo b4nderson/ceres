@@ -28,7 +28,7 @@ def cartoons_to_video(folder_name):
 
         output_path = cartoon_video_folder_path(folder_name)
         output = cv2.VideoWriter(
-            output_path, cv2.VideoWriter_fourcc(*'mp4v'), 15, size)
+            output_path, cv2.VideoWriter_fourcc(*'mp4v'), 30, size)
 
         for cartoon_index in range(len(cartoons)):
             output.write(cartoons[cartoon_index])
