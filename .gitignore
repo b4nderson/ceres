@@ -1,4 +1,3 @@
-assets/**/videos/*.mp4
-assets/**/images/*.png
+assets/**
 
 __pycache__/

@@ -5,11 +5,11 @@ from os import listdir
 import cv2
 
 
-def images_to_cartoons(video_name):
-    images = listdir(original_images_folder_path(video_name))
+def images_to_cartoons(folder_name):
+    images = listdir(original_images_folder_path(folder_name))
 
     for image_index in range(1, len(images)):
-        image_path = original_image_path(video_name, image_index)
+        image_path = original_image_path(folder_name, image_index)
         image = cv2.imread(image_path)
 
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -19,5 +19,5 @@ def images_to_cartoons(video_name):
         color = cv2.bilateralFilter(image, 9, 250, 250)
         cartoon = cv2.bitwise_and(color, color, mask=edges)
 
-        cartoon_path = cartoon_image_path(video_name, image_index)
+        cartoon_path = cartoon_image_path(folder_name, str(image_index))
         cv2.imwrite(cartoon_path, cartoon)
