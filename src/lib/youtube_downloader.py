@@ -3,6 +3,8 @@ from pytube import YouTube
 from lib.format_text import format_text
 from lib.utils.paths import videos_folder_path
 
+from config.extensions import video_extension
+
 
 def youtube_downloader(youtube_url):
     try:
@@ -16,7 +18,7 @@ def youtube_downloader(youtube_url):
 
         video_name = format_text(stream.title)
         video_folder_path = videos_folder_path(video_name)
-        video_path = 'original.mp4'
+        video_path = 'original.{}'.format(video_extension)
 
         stream.download(output_path=video_folder_path, filename=video_path)
 

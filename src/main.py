@@ -6,9 +6,11 @@ from lib.images_to_cartoons import images_to_cartoons
 
 from services.insert_data_service import insert_data_service
 
+import database.connection
+
 
 def main():
-    youtube_url = 'https://youtu.be/l-aS0XSmShM'
+    youtube_url = 'https://www.youtube.com/watch?v=uMeR2W19wT0'
 
     folder_name = youtube_downloader(youtube_url)
     insert_data_service(folder_name)

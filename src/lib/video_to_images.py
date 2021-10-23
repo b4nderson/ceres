@@ -21,6 +21,7 @@ def video_to_images(video_name):
             image_path = original_image_path(video_name, str(frame_index))
             cv2.imwrite(image_path, frame)
 
+        cv2.destroyAllWindows()
         print('[video_to_images] Video to images converted!')
     except ValueError:
         print('[video_to_images] Its not possible convert video to images!')
