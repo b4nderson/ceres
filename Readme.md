@@ -12,4 +12,4 @@
 [![Watch the video](https://img.youtube.com/vi/A7ragsVf99s/hqdefault.jpg)](https://youtu.be/A7ragsVf99s) -->
 
      Classroom of the elite Opening (click on the photo): 
-[![Watch the video](https://img.youtube.com/vi/W60PzS0q-GY/hqdefault.jpg)](https://youtu.be/A7ragsVf99s)
+[![Watch the video](https://img.youtube.com/vi/W60PzS0q-GY/hqdefault.jpg)](https://youtu.be/W60PzS0q-GY)
